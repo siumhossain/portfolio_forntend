@@ -66,6 +66,18 @@ export default {
             this.$router.push('search/')
         }
     },
+    head:{
+        title:'About me - sium hossain',
+        meta:[
+            {
+                hid:'description',
+                name:'description',
+                content:'Author: sium hossain, Email:sium.hossain@yahoo.com, Education qualification: The Bachelor Degree in CSE at Green University Of Bangladesh,Bationality:bangladesh,Religion:Islam'
+            },
+            
+        ],
+        
+    }
 }
 </script>
 <style scoped>

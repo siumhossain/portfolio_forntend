@@ -16,7 +16,18 @@
 <script>
 export default {
   name: 'IndexPage',
-  
+  head:{
+        title:'Sium hossain - Personal website',
+        meta:[
+            {
+                hid:'description',
+                name:'description',
+                content:'Author: sium hossain, Email:sium.hossain@yahoo.com, Education qualification: The Bachelor Degree in CSE at Green University Of Bangladesh,Nationality:Bangladesh,Religion:Islam'
+            },
+            
+        ],
+        
+    }
   
 }
 </script>

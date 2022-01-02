@@ -25,10 +25,15 @@
 </template>
 <script>
 export default {
+    data(){
+        return{
+            project:this.$store.state.project
+        }
+    },
     
-    async asyncData({$axios,params}){
+    async asyncData({$axios,params,store}){
         const projectObj = await $axios.$get(`projects/${params.id}/`)
-        
+        store.dispatch('project',projectObj)
         
         return { projectObj }
     },
@@ -36,6 +41,24 @@ export default {
         back(){
             this.$router.back()
         }
+    },
+    head(){
+        return{
+        
+        title:this.project.title,
+        meta:[
+            {
+                hid:'description',
+                name:'description',
+                content:this.project.short_description
+            },
+            
+        ],
+        
+    
+
+    }
+
     }
 }
 </script>

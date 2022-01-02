@@ -26,18 +26,42 @@
 </template>
 <script>
 export default {
+    data(){
+       return{
+           blog_title:this.$store.state.blog.title,
+           blog_short_description:this.$store.state.blog.short_description
+       }
+   },
     
-    async asyncData({$axios,params}){
+    async asyncData({$axios,params,store}){
         const blogObj = await $axios.$get(`blog/${params.id}/`)
         
-        
+        store.dispatch('blog',blogObj)
         return { blogObj }
     },
     methods: {
         back(){
             this.$router.back()
         }
+    },
+    head(){
+        return{
+        
+        title:this.blog_title,
+        meta:[
+            {
+                hid:'description',
+                name:'description',
+                content:this.blog_short_description
+            },
+            
+        ],
+        
+    
+
     }
+
+    },
 }
 </script>
 <style .scoped>

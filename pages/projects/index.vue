@@ -70,6 +70,18 @@ export default {
             this.$router.push('search/')
         }
     },
+    head:{
+        title:'Project',
+        meta:[
+            {
+                hid:'description',
+                name:'description',
+                content:'Author:sium hossain,All of project description so far i worked on.And from this section anyone will get idea about which framework i\'m familiar with'
+            },
+            
+        ],
+        
+    }
 }
 </script>
 <style scoped>

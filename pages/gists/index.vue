@@ -70,6 +70,18 @@ export default {
             this.$router.push('search/')
         }
     },
+    head:{
+        title:'Gist',
+        meta:[
+            {
+                hid:'description',
+                name:'description',
+                content:'Author:sium hossain,Sium hossain personal blog section.Where i will discuss about lot of tool,technologies,features,newest framework, programming language and much more.'
+            },
+            
+        ],
+        
+    }
 }
 </script>
 <style scoped>
