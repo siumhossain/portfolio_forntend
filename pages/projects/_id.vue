@@ -1,0 +1,51 @@
+<template >
+    <div>
+        <div @click="back()" class="mt-3 ml-4 backbutton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+</svg>
+    <span >Back</span>
+
+        </div>
+        
+        
+       <div class="card" style="width: 70%">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+            <h5 class="card-title">{{projectObj.title}}</h5>
+            <p class="card-text">{{projectObj.short_description}}
+                <br>
+                <small>{{projectObj.created}}</small>
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            <span v-html="projectObj.description"></span>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+export default {
+    
+    async asyncData({$axios,params}){
+        const projectObj = await $axios.$get(`projects/${params.id}/`)
+        
+        
+        return { projectObj }
+    },
+    methods: {
+        back(){
+            this.$router.back()
+        }
+    }
+}
+</script>
+<style .scoped>
+.card{
+    border:none;
+    margin-top:20px;
+    margin-left:15px;
+}
+.backbutton:hover{
+    cursor:pointer
+}
+</style>
