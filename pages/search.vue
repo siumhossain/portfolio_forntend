@@ -115,7 +115,7 @@ export default {
         },
         async submit(){
             this.$store.dispatch('search',this.search)
-            await axios.get(`http://127.0.0.1:8000/api/search/${this.search}/`)
+            await axios.get(`https://damp-wave-93524.herokuapp.com/api/search/${this.search}/`)
         .then(res => {
             if(res.status === 200){
                 console.log('201')
