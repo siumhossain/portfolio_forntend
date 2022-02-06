@@ -1,7 +1,7 @@
 <template >
     <div>
         
-        <div class="card mx-2" style="width: 35rem;">
+        <div class="card mx-2" >
             <div class="card-body">
                 <div class="mb-3">
     <input v-if="searchField === false" v-on:keyup.enter="submit()"  v-model="search" type="text" class="form-control" placeholder="search..." >
@@ -75,5 +75,18 @@ export default {
 }
  .card{
      border-radius:20px;
- }  
+ } 
+ 
+ @media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .card {
+      width:35rem;
+    }
+}
+ @media only screen and (max-width: 390px) {
+  /* For desktop: */
+  .card {
+      width:23rem;
+    }
+}
 </style>

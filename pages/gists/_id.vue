@@ -8,11 +8,11 @@
 
         </div>
         
-        
-       <div class="card" style="width: 70%">
+        <div class="container">
+            <div class="card" style="width: 70%">
         <!-- <img src="..." class="card-img-top" alt="..."> -->
             <div class="card-body">
-            <h5 class="card-title">{{blogObj.title}}</h5>
+            <h1 class="card-title">{{blogObj.title}}</h1>
             <p class="card-text">
                 <small>{{blogObj.created}}</small>
             </p>
@@ -22,6 +22,9 @@
             <span v-html="blogObj.description"></span>
             </div>
         </div>
+
+        </div>
+       
     </div>
 </template>
 <script>
@@ -73,4 +76,5 @@ export default {
 .backbutton:hover{
     cursor: pointer;
 }
+
 </style>
