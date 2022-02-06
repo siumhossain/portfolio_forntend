@@ -80,7 +80,7 @@ export default {
  @media only screen and (min-width: 768px) {
   /* For desktop: */
   .card {
-      width:35rem;
+      width:34rem;
     }
 }
  @media only screen and (max-width: 390px) {
