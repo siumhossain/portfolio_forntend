@@ -19,6 +19,7 @@
             </p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             <span v-html="projectObj.description"></span>
+            <img :src="'https://damp-wave-93524.herokuapp.com'+projectObj.thumbnail" class="thumb" alt="image">
             </div>
         </div>
     </div>
@@ -40,7 +41,8 @@ export default {
     methods: {
         back(){
             this.$router.back()
-        }
+        },
+        
     },
     head(){
         return{
@@ -70,5 +72,12 @@ export default {
 }
 .backbutton:hover{
     cursor:pointer
+}
+.thumb{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  height:auto;
 }
 </style>
