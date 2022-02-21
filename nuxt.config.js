@@ -107,4 +107,3 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
-http://63.250.44.136/admin/
