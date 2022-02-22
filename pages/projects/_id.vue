@@ -19,7 +19,7 @@
             </p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             <span v-html="projectObj.description"></span>
-            <img :src="'https://damp-wave-93524.herokuapp.com'+projectObj.thumbnail" class="thumb" alt="image">
+            <img :src="'https://siumhossain.store'+projectObj.thumbnail" class="thumb" alt="image">
             </div>
         </div>
     </div>
