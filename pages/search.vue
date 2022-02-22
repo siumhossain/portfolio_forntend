@@ -115,7 +115,7 @@ export default {
         },
         async submit(){
             this.$store.dispatch('search',this.search)
-            await axios.get(`http://63.250.44.136/api/search/${this.search}/`)
+            await axios.get(`https://siumhossain.store//api/search/${this.search}/`)
         .then(res => {
             if(res.status === 200){
                 console.log('201')
