@@ -61,6 +61,7 @@ export default {
             },
         images(){
             console.log('image')
+            this.$router.push('/images');
             },
         submit(){
             this.$store.dispatch('search',this.search)
